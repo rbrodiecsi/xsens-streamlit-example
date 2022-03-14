@@ -181,6 +181,8 @@ def app():
 
     with st.expander("Upload", expanded=True):
         uploaded_file = st.file_uploader(label="Upload Files", accept_multiple_files=False)
+        st.markdown("<p>A prepared ouptut file is available <a href='https://raw.githubusercontent.com/rbrodiecsi/xsens-streamlit-example/main/example_data/xsens_running_data.csv' target='_blank'>HERE</a>. Right click and select <strong>Save Link As...</strong></p>",
+                    unsafe_allow_html=True)
 
     if uploaded_file:
         if workflow_stage() == WorkflowStages.UPLOAD:
